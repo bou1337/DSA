@@ -4,18 +4,19 @@
 
 void  revers(std :: vector <int> &array)
 {
+    
     int size  = array.size() ;
-    std :: vector <int>tmp(size) ;
-    int i = size -1 ;
-    int j = 0 ;
-
-    while(i>=0)
-        tmp[j++] = array[i--] ;
-    i = 0 ;
-    while(i<size)
+    int  right = 0 ;
+    int left = size -1 ;
+    int tmp  ;
+    while(right<left)
     {
-        array [i] = tmp[i] ;
-        i++ ;
+        tmp = array[left] ;
+        array[left] = array[right] ;
+        array[right] = tmp ;
+
+        left --;
+        right ++ ;
     }
 }
 int main()
