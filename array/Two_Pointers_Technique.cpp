@@ -1,34 +1,10 @@
-
-
-#include <vector>
 #include <iostream>
+#include <functional>
 
-
-bool  find_target(std :: vector <int> array, int target)
-{
-    int left = 0 ;
-    int right = array.size() -1 ;
-    int sum ;
-
-    while(left<right)
-    {
-        sum = array[left] + array[right] ;
-        if(sum = target)
-        return true ;
-        else if(sum > target)
-        right-- ;
-        else 
-        left ++ ;
-    }
-    return false ;
-}
-
-int main()
-{
-
-    std :: vector <int> array ={-1, 20,23,25,30,100} ;
-    if(find_target(array,29))
-    std :: cout <<"true\n" ;
-    else 
-    std :: cout <<"flase\n" ;
+int main() {
+    std::hash<std::string> hash_fn;
+    
+    size_t hash = hash_fn("1");
+    std::cout << "Hash of '" <<"' is " << hash << "\n";
+    return 0;
 }
